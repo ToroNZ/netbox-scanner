@@ -148,7 +148,7 @@ class NetBoxScanner(object):
                 prefix = prefix.split("/")
         except ValueError:
             if not self.vrf:
-                rint("Duplicated", host[0])  # Give some output..
+                print("Duplicated", host[0])  # Give some output..
                 self.logger('duplicated', address=host[0])
             else:
                 print("Duplicated",host[0],"VRF:", self.vrf) # Give some output..
